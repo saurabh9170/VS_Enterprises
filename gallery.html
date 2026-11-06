@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | V.S. Enterprises</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme.css">
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-mark.png" alt="V.S. Enterprises logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-name">V.S. ENTERPRISES</span>
+                    <span class="brand-sub">V.S. Fencing Services</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About Us</a><a href="products.html" class="nav-link">Products</a><a href="services.html" class="nav-link">Services</a><a href="gallery.html" class="nav-link active">Gallery</a><a href="videos.html" class="nav-link">Videos</a><a href="calculator.html" class="nav-link">Cost Estimator</a><a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+916260362038" class="btn btn-call"><i class="fa-solid fa-phone"></i> 6260362038</a>
+                <a href="https://wa.me/916260362038" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+<section id="gallery" class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="sub-title">WORK & PROJECT GALLERY</span>
+                <h2>Our Completed Projects</h2>
+                <p>See our portfolio of completed projects and site photos.</p>
+            </div>
+
+            <!-- Gallery Filter Buttons -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all" onclick="filterGallery('all', this)">All Works <span class="count">216</span></button>
+                <button class="filter-btn" data-filter="chainlink-fence" onclick="filterGallery('chainlink-fence', this)">Chainlink Fencing <span class="count">13</span></button>
+                <button class="filter-btn" data-filter="chainlink-mesh" onclick="filterGallery('chainlink-mesh', this)">Chainlink Mesh Rolls <span class="count">29</span></button>
+                <button class="filter-btn" data-filter="precast" onclick="filterGallery('precast', this)">Precast Boundary Wall <span class="count">17</span></button>
+                <button class="filter-btn" data-filter="posts" onclick="filterGallery('posts', this)">Concrete Posts <span class="count">5</span></button>
+                <button class="filter-btn" data-filter="barbed-fence" onclick="filterGallery('barbed-fence', this)">Barbed Wire Fencing <span class="count">15</span></button>
+                <button class="filter-btn" data-filter="barbed-wire" onclick="filterGallery('barbed-wire', this)">Barbed Wire Rolls <span class="count">21</span></button>
+                <button class="filter-btn" data-filter="concertina-fence" onclick="filterGallery('concertina-fence', this)">Concertina Fencing <span class="count">28</span></button>
+                <button class="filter-btn" data-filter="concertina-wire" onclick="filterGallery('concertina-wire', this)">Concertina Wire Rolls <span class="count">13</span></button>
+                <button class="filter-btn" data-filter="weld-mesh" onclick="filterGallery('weld-mesh', this)">Weld Mesh <span class="count">18</span></button>
+                <button class="filter-btn" data-filter="gi-wire" onclick="filterGallery('gi-wire', this)">GI & Black Wire <span class="count">27</span></button>
+                <button class="filter-btn" data-filter="poultry" onclick="filterGallery('poultry', this)">Poultry & Hexagonal Mesh <span class="count">8</span></button>
+                <button class="filter-btn" data-filter="perforated" onclick="filterGallery('perforated', this)">Perforated Sheet <span class="count">5</span></button>
+                <button class="filter-btn" data-filter="angle" onclick="filterGallery('angle', this)">Iron Angle <span class="count">2</span></button>
+                <button class="filter-btn" data-filter="turf" onclick="filterGallery('turf', this)">Turf & Jhatka Wire <span class="count">2</span></button>
+                <button class="filter-btn" data-filter="catalog" onclick="filterGallery('catalog', this)">Catalog & Price List <span class="count">13</span></button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item chainlink-fence" data-cat="chainlink-fence">
+                    <img src="images/cf1%20%282%29.jpg" alt="GI Chainlink Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI Chainlink Fencing</h4><p>Site Installation</p></div>
+                </div>
+                <div class="gallery-item chainlink-fence" data-cat="chainlink-fence">
+                    <img src="images/cf1.jpg" alt="GI Chainlink Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI Chainlink Fencing</h4><p>Site Installation</p></div>
+                </div>
+                <div class="gallery-item chainlink-fence" data-cat="chainlink-fence">
+                    <img src="images/cf2%20%282%29.jpg" alt="GI Chainlink Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI Chainlink Fencing</h4><p>Site Installation</p></div>
+                </div>
+                <div class="gallery-item chainlink-fence" data-cat="chainlink-fence">
+                    <img src="images/cf2.jpg" alt="GI Chainlink Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI Chainlink Fencing</h4><p>Site Installation</p></div>
+                </div>
+                <div class="gallery-item chainlink-fence" data-cat="chainlink-fence">
+                    <img src="images/cf3%20%282%29.jpg" alt="GI Chainlink Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI Chainlink Fencing</h4><p>Site Installation</p></div>
+                </div>
+                <div class="gallery-item chainlink-fence" data-cat="chainlink-fence">
+                    <img src="images/cf3.jpg" alt="GI Chainlink Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI Chainlink Fencing</h4><p>Site Installation</p></div>
+                </div>
+                <div class="gallery-item chainlink-fence" data-cat="chainlink-fence">
+                    <img src="images/cf4%20%282%29.jpg" alt="GI Chainlink Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI Chainlink Fencing</h4><p>Site Installation</p></div>
+                </div>
+                <div class="gallery-item chainlink-fence" data-cat="chainlink-fence">
+                    <img src="images/cf4.jpg" alt="GI Chainlink Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI Chainlink Fencing</h4><p>Site Installation</p></div>
+                </div>
+                <div class="gallery-item chainlink-fence" data-cat="chainlink-fence">
+                    <img src="images/cf5%20%282%29.jpg" alt="GI Chainlink Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI Chainlink Fencing</h4><p>Site Installation</p></div>
+                </div>
+                <div class="gallery-item chainlink-fence" data-cat="chainlink-fence">
+                    <img src="images/cf5.jpg" alt="GI Chainlink Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI Chainlink Fencing</h4><p>Site Installation</p></div>
+                </div>
+                <div class="gallery-item chainlink-fence" data-cat="chainlink-fence">
+                    <img src="images/cf6.jpg" alt="GI Chainlink Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI Chainlink Fencing</h4><p>Site Installation</p></div>
+                </div>
+                <div class="gallery-item chainlink-fence" data-cat="chainlink-fence">
+                    <img src="images/cf7.jpg" alt="GI Chainlink Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI Chainlink Fencing</h4><p>Site Installation</p></div>
+                </div>
+                <div class="gallery-item chainlink-fence" data-cat="chainlink-fence">
+                    <img src="images/chainlink-fence.jpg" alt="GI Chainlink Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI Chainlink Fencing</h4><p>Site Installation</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/c%20l%20fence.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/c%20link.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cfc1.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/chain%20link%20roll.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/chain%20link.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl1.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl10.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl11.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl12.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl13.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl14.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl15.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl16.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl17.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl18.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl19.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl2.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl20.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl3.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl4.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl5.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl6.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl7.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl8.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/cl9.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/gi%20chain%20link%20fence%20compact%20roll.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/gi%20chain%20link%20images.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/gi%20chain%20link%20roll.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item chainlink-mesh" data-cat="chainlink-mesh">
+                    <img src="images/pvc%20chain%20link%20fence.jpg" alt="GI &amp; PVC Chainlink Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>GI &amp; PVC Chainlink Mesh</h4><p>Rolls in Stock</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/Precast%20wall.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw1.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw10.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw11.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw12.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw13.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw14.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw15.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw16.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw2.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw3.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw4.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw5.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw6.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw7.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw8.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item precast" data-cat="precast">
+                    <img src="images/pbw9.jpg" alt="Precast Concrete Boundary Wall" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Precast Concrete Boundary Wall</h4><p>Readymade Compound Wall</p></div>
+                </div>
+                <div class="gallery-item posts" data-cat="posts">
+                    <img src="images/cp1.jpg" alt="RCC Fencing Posts" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>RCC Fencing Posts</h4><p>Cemented Concrete Poles</p></div>
+                </div>
+                <div class="gallery-item posts" data-cat="posts">
+                    <img src="images/cp2.jpg" alt="RCC Fencing Posts" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>RCC Fencing Posts</h4><p>Cemented Concrete Poles</p></div>
+                </div>
+                <div class="gallery-item posts" data-cat="posts">
+                    <img src="images/cp3.jpg" alt="RCC Fencing Posts" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>RCC Fencing Posts</h4><p>Cemented Concrete Poles</p></div>
+                </div>
+                <div class="gallery-item posts" data-cat="posts">
+                    <img src="images/cp4.jpg" alt="RCC Fencing Posts" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>RCC Fencing Posts</h4><p>Cemented Concrete Poles</p></div>
+                </div>
+                <div class="gallery-item posts" data-cat="posts">
+                    <img src="images/cp5.jpg" alt="RCC Fencing Posts" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>RCC Fencing Posts</h4><p>Cemented Concrete Poles</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/Barbed-Wire.avif" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bf1.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bf2.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bfr1.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bfr10.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bfr11.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bfr12.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bfr2.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bfr3.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bfr4.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bfr5.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bfr6.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bfr7.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bfr8.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-fence" data-cat="barbed-fence">
+                    <img src="images/bfr9.jpg" alt="Barbed Wire &amp; RCC Pole Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Barbed Wire &amp; RCC Pole Fencing</h4><p>Agricultural Plot Protection</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw1.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw10.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw11.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw12.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw13.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw14.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw15.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw16.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw17.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw18.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw2.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw3.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw4.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw5.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw6.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw7.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw8.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/bw9.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/tbw1.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/tbw2.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item barbed-wire" data-cat="barbed-wire">
+                    <img src="images/tbw3.jpg" alt="G.I. Barbed Wire Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. Barbed Wire Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cn8.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf1.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf10.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf11.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf12.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf13.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf14.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf15.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf16.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf17.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf18.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf19.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf2.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf20.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf21.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf22.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf23.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf24.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf25.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf26.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf27.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf3.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf4.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf5.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf6.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf7.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/cnf9.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-fence" data-cat="concertina-fence">
+                    <img src="images/concertina%20wire.jpg" alt="Razor / Concertina Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor / Concertina Wire Fencing</h4><p>Wall-Top Security Setup</p></div>
+                </div>
+                <div class="gallery-item concertina-wire" data-cat="concertina-wire">
+                    <img src="images/cnw1.jpg" alt="Razor Blade Concertina Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor Blade Concertina Coils</h4><p>Industrial Security Stock</p></div>
+                </div>
+                <div class="gallery-item concertina-wire" data-cat="concertina-wire">
+                    <img src="images/cnw10.jpg" alt="Razor Blade Concertina Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor Blade Concertina Coils</h4><p>Industrial Security Stock</p></div>
+                </div>
+                <div class="gallery-item concertina-wire" data-cat="concertina-wire">
+                    <img src="images/cnw11.jpg" alt="Razor Blade Concertina Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor Blade Concertina Coils</h4><p>Industrial Security Stock</p></div>
+                </div>
+                <div class="gallery-item concertina-wire" data-cat="concertina-wire">
+                    <img src="images/cnw12.jpg" alt="Razor Blade Concertina Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor Blade Concertina Coils</h4><p>Industrial Security Stock</p></div>
+                </div>
+                <div class="gallery-item concertina-wire" data-cat="concertina-wire">
+                    <img src="images/cnw13.jpg" alt="Razor Blade Concertina Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor Blade Concertina Coils</h4><p>Industrial Security Stock</p></div>
+                </div>
+                <div class="gallery-item concertina-wire" data-cat="concertina-wire">
+                    <img src="images/cnw2.jpg" alt="Razor Blade Concertina Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor Blade Concertina Coils</h4><p>Industrial Security Stock</p></div>
+                </div>
+                <div class="gallery-item concertina-wire" data-cat="concertina-wire">
+                    <img src="images/cnw3.jpg" alt="Razor Blade Concertina Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor Blade Concertina Coils</h4><p>Industrial Security Stock</p></div>
+                </div>
+                <div class="gallery-item concertina-wire" data-cat="concertina-wire">
+                    <img src="images/cnw4.jpg" alt="Razor Blade Concertina Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor Blade Concertina Coils</h4><p>Industrial Security Stock</p></div>
+                </div>
+                <div class="gallery-item concertina-wire" data-cat="concertina-wire">
+                    <img src="images/cnw5.jpg" alt="Razor Blade Concertina Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor Blade Concertina Coils</h4><p>Industrial Security Stock</p></div>
+                </div>
+                <div class="gallery-item concertina-wire" data-cat="concertina-wire">
+                    <img src="images/cnw6.jpg" alt="Razor Blade Concertina Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor Blade Concertina Coils</h4><p>Industrial Security Stock</p></div>
+                </div>
+                <div class="gallery-item concertina-wire" data-cat="concertina-wire">
+                    <img src="images/cnw7.jpg" alt="Razor Blade Concertina Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor Blade Concertina Coils</h4><p>Industrial Security Stock</p></div>
+                </div>
+                <div class="gallery-item concertina-wire" data-cat="concertina-wire">
+                    <img src="images/cnw8.jpg" alt="Razor Blade Concertina Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor Blade Concertina Coils</h4><p>Industrial Security Stock</p></div>
+                </div>
+                <div class="gallery-item concertina-wire" data-cat="concertina-wire">
+                    <img src="images/cnw9.jpg" alt="Razor Blade Concertina Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Razor Blade Concertina Coils</h4><p>Industrial Security Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/gi_wire.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/gwm1.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/gwm10.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/gwm11.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/gwm2.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/gwm3.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/gwm4.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/gwm5.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/gwm6.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/gwm7.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/gwm8.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/gwm9.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/wm1%20%282%29.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/wm1.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/wm2.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/wm3.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/wm4.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item weld-mesh" data-cat="weld-mesh">
+                    <img src="images/wm5.jpg" alt="M.S. &amp; G.I. Weld Mesh Rolls" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. &amp; G.I. Weld Mesh Rolls</h4><p>Wholesale Stock</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/bnw1.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/bnw2.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/bnw3.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/bnw4.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/bnw5.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/bnw6.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/bnw7.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/bnw8.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/bnw9.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gw1.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gw2.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gw3.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gw4.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gw5.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gwi1.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gwi10.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gwi11.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gwi12.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gwi2.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gwi3.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gwi4.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gwi5.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gwi6.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gwi7.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gwi8.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gwi9.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item gi-wire" data-cat="gi-wire">
+                    <img src="images/gwire1.jpg" alt="G.I. / Binding / Black Wire Coils" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>G.I. / Binding / Black Wire Coils</h4><p>All Gauges Available</p></div>
+                </div>
+                <div class="gallery-item poultry" data-cat="poultry">
+                    <img src="images/cm1.jpg" alt="Poultry Netting / Hexagonal Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Poultry Netting / Hexagonal Mesh</h4><p>PVC &amp; GI Mesh</p></div>
+                </div>
+                <div class="gallery-item poultry" data-cat="poultry">
+                    <img src="images/cm2.jpg" alt="Poultry Netting / Hexagonal Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Poultry Netting / Hexagonal Mesh</h4><p>PVC &amp; GI Mesh</p></div>
+                </div>
+                <div class="gallery-item poultry" data-cat="poultry">
+                    <img src="images/cm3.jpg" alt="Poultry Netting / Hexagonal Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Poultry Netting / Hexagonal Mesh</h4><p>PVC &amp; GI Mesh</p></div>
+                </div>
+                <div class="gallery-item poultry" data-cat="poultry">
+                    <img src="images/cm4.jpg" alt="Poultry Netting / Hexagonal Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Poultry Netting / Hexagonal Mesh</h4><p>PVC &amp; GI Mesh</p></div>
+                </div>
+                <div class="gallery-item poultry" data-cat="poultry">
+                    <img src="images/poultry_farm.jpg" alt="Poultry Netting / Hexagonal Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Poultry Netting / Hexagonal Mesh</h4><p>PVC &amp; GI Mesh</p></div>
+                </div>
+                <div class="gallery-item poultry" data-cat="poultry">
+                    <img src="images/pvc%20hexa2.jpg" alt="Poultry Netting / Hexagonal Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Poultry Netting / Hexagonal Mesh</h4><p>PVC &amp; GI Mesh</p></div>
+                </div>
+                <div class="gallery-item poultry" data-cat="poultry">
+                    <img src="images/pvc%20hexa3.jpg" alt="Poultry Netting / Hexagonal Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Poultry Netting / Hexagonal Mesh</h4><p>PVC &amp; GI Mesh</p></div>
+                </div>
+                <div class="gallery-item poultry" data-cat="poultry">
+                    <img src="images/pvc%20hexagonal%20mesh.jpg" alt="Poultry Netting / Hexagonal Mesh" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Poultry Netting / Hexagonal Mesh</h4><p>PVC &amp; GI Mesh</p></div>
+                </div>
+                <div class="gallery-item perforated" data-cat="perforated">
+                    <img src="images/ps1.jpg" alt="Perforated Sheets" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Perforated Sheets</h4><p>Custom Hole Patterns</p></div>
+                </div>
+                <div class="gallery-item perforated" data-cat="perforated">
+                    <img src="images/ps2.jpg" alt="Perforated Sheets" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Perforated Sheets</h4><p>Custom Hole Patterns</p></div>
+                </div>
+                <div class="gallery-item perforated" data-cat="perforated">
+                    <img src="images/ps3.jpg" alt="Perforated Sheets" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Perforated Sheets</h4><p>Custom Hole Patterns</p></div>
+                </div>
+                <div class="gallery-item perforated" data-cat="perforated">
+                    <img src="images/ps4.jpg" alt="Perforated Sheets" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Perforated Sheets</h4><p>Custom Hole Patterns</p></div>
+                </div>
+                <div class="gallery-item perforated" data-cat="perforated">
+                    <img src="images/ps5.jpg" alt="Perforated Sheets" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Perforated Sheets</h4><p>Custom Hole Patterns</p></div>
+                </div>
+                <div class="gallery-item angle" data-cat="angle">
+                    <img src="images/angle1.jpg" alt="M.S. Fencing Angle" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. Fencing Angle</h4><p>Cut &amp; Drilled Posts</p></div>
+                </div>
+                <div class="gallery-item angle" data-cat="angle">
+                    <img src="images/angle2.jpg" alt="M.S. Fencing Angle" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>M.S. Fencing Angle</h4><p>Cut &amp; Drilled Posts</p></div>
+                </div>
+                <div class="gallery-item turf" data-cat="turf">
+                    <img src="images/jhatka-tar.webp" alt="Sports Turf &amp; Shock Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Sports Turf &amp; Shock Wire Fencing</h4><p>Sports Ground / Farm Safety</p></div>
+                </div>
+                <div class="gallery-item turf" data-cat="turf">
+                    <img src="images/sport-turf.jpg" alt="Sports Turf &amp; Shock Wire Fencing" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Sports Turf &amp; Shock Wire Fencing</h4><p>Sports Ground / Farm Safety</p></div>
+                </div>
+                <div class="gallery-item catalog" data-cat="catalog">
+                    <img src="images/br1.jpg" alt="Product Catalog" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Product Catalog</h4><p>V.S. Enterprises</p></div>
+                </div>
+                <div class="gallery-item catalog" data-cat="catalog">
+                    <img src="images/kf1.jpg" alt="Product Catalog" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Product Catalog</h4><p>V.S. Enterprises</p></div>
+                </div>
+                <div class="gallery-item catalog" data-cat="catalog">
+                    <img src="images/vsfp.jpg" alt="Product Catalog" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Product Catalog</h4><p>V.S. Enterprises</p></div>
+                </div>
+                <div class="gallery-item catalog" data-cat="catalog">
+                    <img src="images/wg1.jpg" alt="Product Catalog" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Product Catalog</h4><p>V.S. Enterprises</p></div>
+                </div>
+                <div class="gallery-item catalog" data-cat="catalog">
+                    <img src="images/wg2.jpg" alt="Product Catalog" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Product Catalog</h4><p>V.S. Enterprises</p></div>
+                </div>
+                <div class="gallery-item catalog" data-cat="catalog">
+                    <img src="images/wg3.jpg" alt="Product Catalog" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Product Catalog</h4><p>V.S. Enterprises</p></div>
+                </div>
+                <div class="gallery-item catalog" data-cat="catalog">
+                    <img src="images/wp.jpg" alt="Product Catalog" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Product Catalog</h4><p>V.S. Enterprises</p></div>
+                </div>
+                <div class="gallery-item catalog" data-cat="catalog">
+                    <img src="images/wp2.jpg" alt="Product Catalog" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Product Catalog</h4><p>V.S. Enterprises</p></div>
+                </div>
+                <div class="gallery-item catalog" data-cat="catalog">
+                    <img src="images/wp3.jpg" alt="Product Catalog" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Product Catalog</h4><p>V.S. Enterprises</p></div>
+                </div>
+                <div class="gallery-item catalog" data-cat="catalog">
+                    <img src="images/wp4.jpg" alt="Product Catalog" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Product Catalog</h4><p>V.S. Enterprises</p></div>
+                </div>
+                <div class="gallery-item catalog" data-cat="catalog">
+                    <img src="images/wp5.jpg" alt="Product Catalog" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Product Catalog</h4><p>V.S. Enterprises</p></div>
+                </div>
+                <div class="gallery-item catalog" data-cat="catalog">
+                    <img src="images/wp6.jpg" alt="Product Catalog" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Product Catalog</h4><p>V.S. Enterprises</p></div>
+                </div>
+                <div class="gallery-item catalog" data-cat="catalog">
+                    <img src="images/wp7.jpg" alt="Product Catalog" loading="lazy" decoding="async">
+                    <div class="gallery-overlay"><h4>Product Catalog</h4><p>V.S. Enterprises</p></div>
+                </div>
+            </div>
+            <p class="gallery-empty" id="galleryEmpty" style="display:none;">No photos in this category yet.</p>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <img src="images/logo-full.jpg" alt="V.S. Enterprises" class="footer-logo">
+            <p class="footer-follow">Follow &amp; find us online</p>
+            <div class="social-links"><a href="https://www.instagram.com/v.s._enterprises?xtok=MWFuZTV2YnE1d21xcA==" target="_blank" rel="noopener" class="social-instagram" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.facebook.com/share/1LpgwnsxMX/" target="_blank" rel="noopener" class="social-facebook" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="https://www.justdial.com/Indore/V-S-Enterprises-Behind-Govt-High-Secondary-School-Gandhi-Nagar/0731PX731-X731-231210125304-M7P8_BZDET/products-Barbed-Wire?nid=11736247&pid=2236276690&showSearch=0&tabNid=10036443" target="_blank" rel="noopener" class="social-justdial" title="Justdial" aria-label="Justdial"><i class="fa-solid fa-j"></i></a><a href="https://www.indiamart.com/vs-enterprisesindore/profile.html" target="_blank" rel="noopener" class="social-indiamart" title="IndiaMART" aria-label="IndiaMART"><i class="fa-solid fa-store"></i></a><a href="mailto:v.s.enterprises2810@gmail.com" class="social-email" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></div>
+            <p><a href="mailto:v.s.enterprises2810@gmail.com" class="footer-mail"><i class="fa-solid fa-envelope"></i> v.s.enterprises2810@gmail.com</a></p>
+            <p>&copy; V.S. Enterprises (V.S. Fencing Services). All Rights Reserved.</p>
+            <p>Designed for Wire Fencing &amp; Precast Wall Solutions in Madhya Pradesh.</p>
+        </div>
+    </footer>
+
+    <!-- Photo Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lb-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+        <button class="lb-nav lb-prev" onclick="stepLightbox(-1)" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <img id="lbImg" src="" alt="">
+        <button class="lb-nav lb-next" onclick="stepLightbox(1)" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="lb-caption" id="lbCaption"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="fx.js"></script>
+</body>
+</html>

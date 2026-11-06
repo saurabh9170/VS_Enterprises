@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fencing Cost Estimator | V.S. Enterprises</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme.css">
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-mark.png" alt="V.S. Enterprises logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-name">V.S. ENTERPRISES</span>
+                    <span class="brand-sub">V.S. Fencing Services</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About Us</a><a href="products.html" class="nav-link">Products</a><a href="services.html" class="nav-link">Services</a><a href="gallery.html" class="nav-link">Gallery</a><a href="videos.html" class="nav-link">Videos</a><a href="calculator.html" class="nav-link active">Cost Estimator</a><a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+916260362038" class="btn btn-call"><i class="fa-solid fa-phone"></i> 6260362038</a>
+                <a href="https://wa.me/916260362038" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+<section id="calculator" class="section">
+        <div class="container">
+            <div class="calculator-box">
+                <div class="calc-header">
+                    <h2><i class="fa-solid fa-calculator"></i> Perimeter Cost Estimator</h2>
+                    <p>Calculate the estimated cost for your fencing project based on the perimeter of your plot.</p>
+                </div>
+
+                <form id="calcForm" class="calc-grid">
+                    <div class="form-group">
+                        <label for="plotLength">Total Plot Perimeter / Boundary (in Feet)</label>
+                        <input type="number" id="plotLength" placeholder="e.g. 500" value="400" min="10" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fencingType">Fencing Option</label>
+                        <select id="fencingType">
+                            <option value="chainlink">GI Chainlink + Concrete Posts</option>
+                            <option value="barbed">Barbed Wire (5 Strands) + Posts</option>
+                            <option value="precast">Precast Boundary Wall (Readymade)</option>
+                            <option value="razor">Concertina Razor Wire + Chainlink</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postSpacing">Distance Between Posts (Feet)</label>
+                        <select id="postSpacing">
+                            <option value="8">8 Feet</option>
+                            <option value="10" selected>10 Feet</option>
+                            <option value="12">12 Feet</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="calculateCost()">Calculate Estimate</button>
+                </form>
+
+                <div class="calc-result" id="calcResult">
+                    <h3>Estimated Calculation Summary</h3>
+                    <div class="result-details">
+                        <div class="result-item">
+                            <span>Approx. Posts Required:</span>
+                            <strong id="postCount">41 Poles</strong>
+                        </div>
+                        <div class="result-item">
+                            <span>Estimated Material Cost:</span>
+                            <strong id="materialCost">₹45,000 - ₹55,000</strong>
+                        </div>
+                    </div>
+                    <p class="calc-note">*Exact price will depend on the final design, site conditions, and wire gauge. Please contact us for a detailed quotation via WhatsApp.</p>
+                    <button class="btn btn-whatsapp" onclick="sendCalcToWhatsApp()"><i class="fa-brands fa-whatsapp"></i> Get Official Quote on WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <img src="images/logo-full.jpg" alt="V.S. Enterprises" class="footer-logo">
+            <p class="footer-follow">Follow &amp; find us online</p>
+            <div class="social-links"><a href="https://www.instagram.com/v.s._enterprises?xtok=MWFuZTV2YnE1d21xcA==" target="_blank" rel="noopener" class="social-instagram" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.facebook.com/share/1LpgwnsxMX/" target="_blank" rel="noopener" class="social-facebook" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="https://www.justdial.com/Indore/V-S-Enterprises-Behind-Govt-High-Secondary-School-Gandhi-Nagar/0731PX731-X731-231210125304-M7P8_BZDET/products-Barbed-Wire?nid=11736247&pid=2236276690&showSearch=0&tabNid=10036443" target="_blank" rel="noopener" class="social-justdial" title="Justdial" aria-label="Justdial"><i class="fa-solid fa-j"></i></a><a href="https://www.indiamart.com/vs-enterprisesindore/profile.html" target="_blank" rel="noopener" class="social-indiamart" title="IndiaMART" aria-label="IndiaMART"><i class="fa-solid fa-store"></i></a><a href="mailto:v.s.enterprises2810@gmail.com" class="social-email" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></div>
+            <p><a href="mailto:v.s.enterprises2810@gmail.com" class="footer-mail"><i class="fa-solid fa-envelope"></i> v.s.enterprises2810@gmail.com</a></p>
+            <p>&copy; V.S. Enterprises (V.S. Fencing Services). All Rights Reserved.</p>
+            <p>Designed for Wire Fencing &amp; Precast Wall Solutions in Madhya Pradesh.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="fx.js"></script>
+</body>
+</html>

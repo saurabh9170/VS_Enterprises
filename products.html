@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | V.S. Enterprises</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme.css">
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-mark.png" alt="V.S. Enterprises logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="brand-name">V.S. ENTERPRISES</span>
+                    <span class="brand-sub">V.S. Fencing Services</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About Us</a><a href="products.html" class="nav-link active">Products</a><a href="services.html" class="nav-link">Services</a><a href="gallery.html" class="nav-link">Gallery</a><a href="videos.html" class="nav-link">Videos</a><a href="calculator.html" class="nav-link">Cost Estimator</a><a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+916260362038" class="btn btn-call"><i class="fa-solid fa-phone"></i> 6260362038</a>
+                <a href="https://wa.me/916260362038" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <button class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+<section id="products" class="section">
+        <div class="container">
+            <div class="section-title">
+                <span class="sub-title">WHOLESALE MATERIAL CATALOG</span>
+                <h2>All Types of Wire Mesh and Fencing Materials</h2>
+                <p>Explore our extensive range of high-quality wire mesh and fencing materials designed to meet all your security and boundary needs.</p>
+            </div>
+
+            <div class="catalog-grid" id="productGrid">
+                <!-- Product Cards -->
+                <div class="product-card">
+                    <div class="product-img has-photo"><img src="images/gwm2.jpg" alt="G.I. Wire Mesh" loading="lazy"></div>
+                    <h3>G.I. Wire Mesh (तारजाली)</h3>
+                    <p>High durability galvanized iron mesh for general fencing & partitions.</p>
+                    <button class="btn btn-outline" onclick="openModal('G.I. Wire Mesh (तारजाली)')">Enquire Price</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img has-photo"><img src="images/cl3.jpg" alt="G.I. Chainlink Mesh" loading="lazy"></div>
+                    <h3>G.I. Chainlink Mesh (जी.आई. चेनलिंक)</h3>
+                    <p>Heavy duty chainlink fencing for plots, farms, and sports grounds.</p>
+                    <button class="btn btn-outline" onclick="openModal('G.I. Chainlink Mesh')">Enquire Price</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img has-photo"><img src="images/bw4.jpg" alt="Barbed Wire" loading="lazy"></div>
+                    <h3>Barbed Wire (कांटेदार तार)</h3>
+                    <p>High-tensile double strand barbed wire for high agricultural plot security.</p>
+                    <button class="btn btn-outline" onclick="openModal('Barbed Wire (कांटेदार तार)')">Enquire Price</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img has-photo"><img src="images/wm2.jpg" alt="M.S. Weld Mesh" loading="lazy"></div>
+                    <h3>M.S. Weld Mesh (वेल्डिंग जाली)</h3>
+                    <p>Rigid welded wire mesh for industrial enclosures and structural partition.</p>
+                    <button class="btn btn-outline" onclick="openModal('M.S. Weld Mesh (वेल्डिंग जाली)')">Enquire Price</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img has-photo"><img src="images/gwm4.jpg" alt="G.I. Weld Mesh / Onion Mesh" loading="lazy"></div>
+                    <h3>G.I. Weld Mesh / Onion Mesh (प्याज जाली)</h3>
+                    <p>Special fine gauge weld mesh used extensively in agriculture & crop storage.</p>
+                    <button class="btn btn-outline" onclick="openModal('G.I. Weld Mesh / Onion Mesh')">Enquire Price</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img has-photo"><img src="images/cnw2.jpg" alt="Concertina Wire" loading="lazy"></div>
+                    <h3>Concertina Wire (ब्लेड जाली)</h3>
+                    <p>Sharp razor blade coil fencing for maximum security boundaries.</p>
+                    <button class="btn btn-outline" onclick="openModal('Concertina Wire (ब्लेड जाली)')">Enquire Price</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img has-photo"><img src="images/cm1.jpg" alt="Poultry Netting" loading="lazy"></div>
+                    <h3>Poultry Netting (मुर्गा जाली)</h3>
+                    <p>Hexagonal mesh specially suited for poultry farm structures & bird protection.</p>
+                    <button class="btn btn-outline" onclick="openModal('Poultry Netting (मुर्गा जाली)')">Enquire Price</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img has-photo"><img src="images/jhatka-tar.webp" alt="Clutch Wire / Shock Wire" loading="lazy"></div>
+                    <h3>Clutch Wire / Shock Wire (झटका तार)</h3>
+                    <p>Conductive clutch wire for electric solar fencing & crop protection.</p>
+                    <button class="btn btn-outline" onclick="openModal('Clutch Wire / Shock Wire (झटका तार)')">Enquire Price</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img has-photo"><img src="images/bnw1.jpg" alt="G.I. & M.S. Wire" loading="lazy"></div>
+                    <h3>G.I. & M.S. Wire (Kala Taar)</h3>
+                    <p>Raw binding wire, black wire, and GI wire rolls available in all gauges.</p>
+                    <button class="btn btn-outline" onclick="openModal('G.I. & M.S. Wire (Kala Taar)')">Enquire Price</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img has-photo"><img src="images/angle2.jpg" alt="M.S. Iron Angle" loading="lazy"></div>
+                    <h3>M.S. Iron Angle (Fencing Angle)</h3>
+                    <p>Heavy angle iron posts cut and drilled for supporting fence wires.</p>
+                    <button class="btn btn-outline" onclick="openModal('M.S. Iron Angle')">Enquire Price</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img has-photo"><img src="images/cp3.jpg" alt="Cemented Concrete Posts" loading="lazy"></div>
+                    <h3>Cemented Concrete Posts (सीमेंटेड पोल)</h3>
+                    <p>Pre-stressed reinforced RCC posts engineered for long service life.</p>
+                    <button class="btn btn-outline" onclick="openModal('Cemented Concrete Posts')">Enquire Price</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img has-photo"><img src="images/ps4.jpg" alt="Perforated Sheet" loading="lazy"></div>
+                    <h3>Perforated Sheet (छिद्रित शीट)</h3>
+                    <p>Round-hole perforated M.S. &amp; G.I. sheets for screens, filters, ventilation and safety guards.</p>
+                    <button class="btn btn-outline" onclick="openModal('Perforated Sheet')">Enquire Price</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <img src="images/logo-full.jpg" alt="V.S. Enterprises" class="footer-logo">
+            <p class="footer-follow">Follow &amp; find us online</p>
+            <div class="social-links"><a href="https://www.instagram.com/v.s._enterprises?xtok=MWFuZTV2YnE1d21xcA==" target="_blank" rel="noopener" class="social-instagram" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.facebook.com/share/1LpgwnsxMX/" target="_blank" rel="noopener" class="social-facebook" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="https://www.justdial.com/Indore/V-S-Enterprises-Behind-Govt-High-Secondary-School-Gandhi-Nagar/0731PX731-X731-231210125304-M7P8_BZDET/products-Barbed-Wire?nid=11736247&pid=2236276690&showSearch=0&tabNid=10036443" target="_blank" rel="noopener" class="social-justdial" title="Justdial" aria-label="Justdial"><i class="fa-solid fa-j"></i></a><a href="https://www.indiamart.com/vs-enterprisesindore/profile.html" target="_blank" rel="noopener" class="social-indiamart" title="IndiaMART" aria-label="IndiaMART"><i class="fa-solid fa-store"></i></a><a href="mailto:v.s.enterprises2810@gmail.com" class="social-email" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></div>
+            <p><a href="mailto:v.s.enterprises2810@gmail.com" class="footer-mail"><i class="fa-solid fa-envelope"></i> v.s.enterprises2810@gmail.com</a></p>
+            <p>&copy; V.S. Enterprises (V.S. Fencing Services). All Rights Reserved.</p>
+            <p>Designed for Wire Fencing &amp; Precast Wall Solutions in Madhya Pradesh.</p>
+        </div>
+    </footer>
+
+    <!-- Inquiry Modal -->
+    <div class="modal" id="inquiryModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3 id="modalProductName">Product Inquiry</h3>
+            <p>Directly contact proprietor on WhatsApp for exact wholesale pricing:</p>
+            <form onsubmit="handleModalSubmit(event)">
+                <div class="form-group">
+                    <input type="text" id="modalName" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="modalQty" placeholder="Approx Quantity / Feet" required>
+                </div>
+                <button type="submit" class="btn btn-whatsapp btn-block"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="fx.js"></script>
+</body>
+</html>
